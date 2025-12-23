@@ -47,7 +47,7 @@ const Subsidiaries: React.FC = () => {
                 {/* Logo Area - Replace src with actual file path */}
                 <div className="w-32 h-32 flex-shrink-0 flex items-center justify-center bg-white rounded-lg shadow-sm border border-slate-100 p-2">
                   <img
-                    src="https://placehold.co/400x400/png?text=Resource+Logo"
+                    src="./Resource.jpg"
                     alt="StoneCrest Resource Limited Logo"
                     className="max-w-full max-h-full object-contain"
                   />
@@ -111,7 +111,7 @@ const Subsidiaries: React.FC = () => {
                 {/* Logo Area - Replace src with actual file path */}
                 <div className="w-48 h-32 flex-shrink-0 flex items-center justify-center bg-white rounded-lg shadow-sm border border-slate-100 p-2">
                   <img
-                    src="https://placehold.co/600x400/png?text=Mining+Corp+Logo"
+                    src="./Mining.jpg"
                     alt="StoneCrest Mining Corporation Logo"
                     className="max-w-full max-h-full object-contain"
                   />

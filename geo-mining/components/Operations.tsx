@@ -110,7 +110,7 @@ const Operations: React.FC = () => {
             <div className="relative z-10">
               <div className="h-16 mb-6 flex items-center">
                 <img
-                  src="https://placehold.co/300x200/png?text=Mining+Logo"
+                  src="./Mining.jpg"
                   alt="StoneCrest Mining Corporation Logo"
                   className="max-h-full max-w-full object-contain"
                 />
