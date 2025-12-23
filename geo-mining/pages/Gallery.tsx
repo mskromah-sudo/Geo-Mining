@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import PageHeader from '../components/PageHeader';
 import { Maximize2, X, Filter, Loader2 } from 'lucide-react';
@@ -10,64 +9,73 @@ const galleryImages: GalleryImage[] = [
     url: 'https://images.unsplash.com/photo-1578319439584-104c94d37305?q=80&w=1200',
     category: 'Operations',
     title: 'Open Pit Operations',
-    description: 'Heavy machinery active at a primary extraction site in Liberia.'
+    description:
+      'Heavy machinery active at a primary extraction site in Liberia.',
   },
   {
     id: '2',
     url: 'https://images.unsplash.com/photo-1516939884455-1445c8652f83?q=80&w=1200',
     category: 'Exploration',
     title: 'Geological Core Sampling',
-    description: 'Exploration team conducting core analysis in the Nimba region.'
+    description:
+      'Exploration team conducting core analysis in the Nimba region.',
   },
   {
     id: '3',
     url: 'https://images.unsplash.com/photo-1574689049868-e94ed5301745?q=80&w=1200',
     category: 'Environment',
     title: 'Water Management System',
-    description: 'Advanced filtration systems ensuring zero discharge impact on local waterways.'
+    description:
+      'Advanced filtration systems ensuring zero discharge impact on local waterways.',
   },
   {
     id: '4',
     url: 'https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200',
     category: 'Community',
     title: 'Education Support Program',
-    description: 'Handing over a new community learning center as part of the CDA.'
+    description:
+      'Handing over a new community learning center as part of the CDA.',
   },
   {
     id: '5',
     url: 'https://images.unsplash.com/photo-1533038590840-1cde6b66b7c6?q=80&w=1200',
     category: 'Operations',
     title: 'Processing Facility',
-    description: 'State-of-the-art mineral processing unit during shift change.'
+    description:
+      'State-of-the-art mineral processing unit during shift change.',
   },
   {
     id: '6',
     url: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200',
     category: 'Environment',
     title: 'Land Rehabilitation',
-    description: 'Reforestation of previously mined sectors with indigenous species.'
+    description:
+      'Reforestation of previously mined sectors with indigenous species.',
   },
   {
     id: '7',
     url: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1200',
     category: 'Exploration',
     title: 'Aero-Magnetic Surveying',
-    description: 'Regional exploration mapping using advanced geophysical tools.'
+    description:
+      'Regional exploration mapping using advanced geophysical tools.',
   },
   {
     id: '8',
     url: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200',
     category: 'Community',
     title: 'Local Health Initiative',
-    description: 'Mobile health clinic providing services to remote host communities.'
+    description:
+      'Mobile health clinic providing services to remote host communities.',
   },
   {
     id: '9',
     url: 'https://images.unsplash.com/photo-1541888941255-202496a5c20c?q=80&w=1200',
     category: 'Operations',
     title: 'Safety Training Seminar',
-    description: 'Mandatory HSE refresher course for all site operational staff.'
-  }
+    description:
+      'Mandatory HSE refresher course for all site operational staff.',
+  },
 ];
 
 interface GalleryImageItemProps {
@@ -75,11 +83,14 @@ interface GalleryImageItemProps {
   onClick: (image: GalleryImage) => void;
 }
 
-const GalleryImageItem: React.FC<GalleryImageItemProps> = ({ image, onClick }) => {
+const GalleryImageItem: React.FC<GalleryImageItemProps> = ({
+  image,
+  onClick,
+}) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <div 
+    <div
       className="group relative h-80 overflow-hidden bg-slate-100 rounded-sm cursor-pointer shadow-sm border border-slate-100"
       onClick={() => onClick(image)}
     >
@@ -90,28 +101,30 @@ const GalleryImageItem: React.FC<GalleryImageItemProps> = ({ image, onClick }) =
         </div>
       )}
 
-      <img 
-        src={image.url} 
-        alt={image.title} 
+      <img
+        src={image.url}
+        alt={image.title}
         loading="lazy"
         onLoad={() => setIsLoaded(true)}
         className={`w-full h-full object-cover transition-all duration-1000 ease-in-out grayscale group-hover:grayscale-0 group-hover:scale-105 ${
           isLoaded ? 'opacity-100 blur-0' : 'opacity-0 blur-md'
         }`}
       />
-      
+
       {/* Overlay Content - enhanced hover interactions */}
       {isLoaded && (
         <>
           {/* Fading Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-700"></div>
-          
+
           {/* Content with synced fade and slide */}
           <div className="absolute inset-x-0 bottom-0 p-6 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out">
             <span className="inline-block px-2 py-1 mb-2 bg-amber-500 text-slate-900 text-[10px] font-bold uppercase tracking-widest shadow-lg">
               {image.category}
             </span>
-            <h3 className="text-white font-bold text-lg mb-1 drop-shadow-md">{image.title}</h3>
+            <h3 className="text-white font-bold text-lg mb-1 drop-shadow-md">
+              {image.title}
+            </h3>
             <p className="text-slate-300 text-xs transition-opacity duration-500 line-clamp-2 leading-relaxed">
               {image.description}
             </p>
@@ -133,16 +146,23 @@ const Gallery: React.FC = () => {
   const [filter, setFilter] = useState<string>('All');
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
-  const categories = ['All', 'Operations', 'Exploration', 'Community', 'Environment'];
+  const categories = [
+    'All',
+    'Operations',
+    'Exploration',
+    'Community',
+    'Environment',
+  ];
 
-  const filteredImages = filter === 'All' 
-    ? galleryImages 
-    : galleryImages.filter(img => img.category === filter);
+  const filteredImages =
+    filter === 'All'
+      ? galleryImages
+      : galleryImages.filter((img) => img.category === filter);
 
   return (
     <div className="bg-white">
-      <PageHeader 
-        title="Visual Archive" 
+      <PageHeader
+        title="Visual Archive"
         category="Media Gallery"
         subtitle="Explore our operational footprint, community impact, and commitment to environmental excellence."
         image="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1920"
@@ -150,12 +170,13 @@ const Gallery: React.FC = () => {
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          
           {/* Filters */}
           <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6 border-b border-slate-100 pb-8">
             <div className="flex items-center gap-2 text-slate-400">
               <Filter size={18} />
-              <span className="text-xs font-bold uppercase tracking-widest">Filter By:</span>
+              <span className="text-xs font-bold uppercase tracking-widest">
+                Filter By:
+              </span>
             </div>
             <div className="flex flex-wrap justify-center gap-2">
               {categories.map((cat) => (
@@ -163,9 +184,9 @@ const Gallery: React.FC = () => {
                   key={cat}
                   onClick={() => setFilter(cat)}
                   className={`px-6 py-2 rounded-sm text-xs font-bold uppercase tracking-widest transition-all ${
-                    filter === cat 
-                    ? 'bg-amber-500 text-slate-900 shadow-lg shadow-amber-500/20' 
-                    : 'bg-slate-50 text-slate-500 hover:bg-slate-100 hover:text-slate-900'
+                    filter === cat
+                      ? 'bg-amber-500 text-slate-900 shadow-lg shadow-amber-500/20'
+                      : 'bg-slate-50 text-slate-500 hover:bg-slate-100 hover:text-slate-900'
                   }`}
                 >
                   {cat}
@@ -177,10 +198,10 @@ const Gallery: React.FC = () => {
           {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredImages.map((image) => (
-              <GalleryImageItem 
-                key={image.id} 
-                image={image} 
-                onClick={setSelectedImage} 
+              <GalleryImageItem
+                key={image.id}
+                image={image}
+                onClick={setSelectedImage}
               />
             ))}
           </div>
@@ -196,18 +217,18 @@ const Gallery: React.FC = () => {
       {/* Lightbox Modal */}
       {selectedImage && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/95 p-4 md:p-10 transition-opacity duration-300">
-          <button 
+          <button
             onClick={() => setSelectedImage(null)}
             className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors z-50"
           >
             <X size={32} />
           </button>
-          
+
           <div className="max-w-6xl w-full flex flex-col md:flex-row bg-slate-900 shadow-2xl overflow-hidden rounded-sm relative animate-[fadeIn_0.3s_ease-out]">
             <div className="flex-[2] bg-black flex items-center justify-center">
-              <img 
-                src={selectedImage.url} 
-                alt={selectedImage.title} 
+              <img
+                src={selectedImage.url}
+                alt={selectedImage.title}
                 className="w-full h-full object-contain"
               />
             </div>
@@ -234,12 +255,16 @@ const Gallery: React.FC = () => {
         </div>
       )}
 
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         @keyframes fadeIn {
           from { opacity: 0; transform: scale(0.95); }
           to { opacity: 1; transform: scale(1); }
         }
-      `}} />
+      `,
+        }}
+      />
     </div>
   );
 };

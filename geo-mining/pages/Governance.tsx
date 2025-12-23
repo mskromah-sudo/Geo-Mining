@@ -17,23 +17,30 @@ const Governance: React.FC = () => {
 
   return (
     <div>
-      <PageHeader 
-        title="Governance & Compliance" 
+      <PageHeader
+        title="Governance & Compliance"
         category="Corporate Responsibility"
         subtitle="Upholding the highest standards of ethical conduct, regulatory compliance, and transparency."
         image="https://picsum.photos/1920/802?grayscale"
       />
 
       <section className="py-20 bg-white">
-        <div id="framework" className="max-w-4xl mx-auto px-4 md:px-8 text-center mb-16 scroll-mt-24">
-          <h2 className="text-3xl font-light text-slate-900 mb-6">Our Framework</h2>
+        <div
+          id="framework"
+          className="max-w-4xl mx-auto px-4 md:px-8 text-center mb-16 scroll-mt-24"
+        >
+          <h2 className="text-3xl font-light text-slate-900 mb-6">
+            Our Framework
+          </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            At Geo Mining & Environmental Consultancy, strict adherence to national laws and international best practices is non-negotiable. Our governance framework ensures accountability at all levels of the organization.
+            At Geo Mining & Environmental Consultancy, strict adherence to
+            national laws and international best practices is non-negotiable.
+            Our governance framework ensures accountability at all levels of the
+            organization.
           </p>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
-          
           <div className="space-y-8">
             <div id="compliance" className="flex gap-6 scroll-mt-24">
               <div className="flex-shrink-0">
@@ -42,13 +49,23 @@ const Governance: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Regulatory Compliance</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  Regulatory Compliance
+                </h3>
                 <p className="text-slate-600 mb-4 leading-relaxed">
-                  We operate in full compliance with the <strong>Liberia Environmental Protection Agency (EPA)</strong> and the <strong>Ministry of Mines & Energy</strong>. Our operations meet all permitting requirements and regulatory standards set forth by the Government of Liberia.
+                  We operate in full compliance with the{' '}
+                  <strong>Liberia Environmental Protection Agency (EPA)</strong>{' '}
+                  and the <strong>Ministry of Land,Mines & Energy</strong>. Our
+                  operations meet all permitting requirements and regulatory
+                  standards set forth by the Government of Liberia.
                 </p>
                 <ul className="text-sm text-slate-500 space-y-2">
-                  <li className="flex items-center gap-2">✔ Liberia Mining and Minerals Law</li>
-                  <li className="flex items-center gap-2">✔ Environmental Protection and Management Law</li>
+                  <li className="flex items-center gap-2">
+                    ✔ Liberia Mining and Minerals Law
+                  </li>
+                  <li className="flex items-center gap-2">
+                    ✔ Environmental Protection and Management Law
+                  </li>
                 </ul>
               </div>
             </div>
@@ -60,9 +77,14 @@ const Governance: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Ethical Business Conduct</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  Ethical Business Conduct
+                </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Integrity and transparency are core to our business model. We maintain a zero-tolerance policy towards corruption and are committed to ethical dealings with all stakeholders, partners, and government bodies.
+                  Integrity and transparency are core to our business model. We
+                  maintain a zero-tolerance policy towards corruption and are
+                  committed to ethical dealings with all stakeholders, partners,
+                  and government bodies.
                 </p>
               </div>
             </div>
@@ -76,9 +98,14 @@ const Governance: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Risk Management</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  Risk Management
+                </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Our comprehensive risk management strategies identify, assess, and mitigate operational, environmental, and social risks. Regular audits and oversight ensure our projects remain safe and sustainable.
+                  Our comprehensive risk management strategies identify, assess,
+                  and mitigate operational, environmental, and social risks.
+                  Regular audits and oversight ensure our projects remain safe
+                  and sustainable.
                 </p>
               </div>
             </div>
@@ -90,25 +117,35 @@ const Governance: React.FC = () => {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Corporate Oversight</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  Corporate Oversight
+                </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  As the parent holding company, Geo Mining & Environmental Consultancy sets the governance tone for all subsidiaries, ensuring that StoneCrest Resource Limited and StoneCrest Mining Corporation adhere to the same rigorous standards.
+                  As the parent holding company, Geo Mining & Environmental
+                  Consultancy sets the governance tone for all subsidiaries,
+                  ensuring that StoneCrest Resource Limited and StoneCrest
+                  Mining Corporation adhere to the same rigorous standards.
                 </p>
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
       {/* Call to Action */}
       <section className="bg-slate-50 py-16 border-t border-slate-200">
         <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
-          <h3 className="text-2xl font-bold text-slate-900 mb-4">Commitment to Transparency</h3>
+          <h3 className="text-2xl font-bold text-slate-900 mb-4">
+            Commitment to Transparency
+          </h3>
           <p className="text-slate-600 mb-8">
-            We believe that transparent operations build trust with our communities and investors. 
+            We believe that transparent operations build trust with our
+            communities and investors.
           </p>
-          <a href="#contact" className="inline-block bg-slate-900 text-white px-8 py-3 font-bold text-sm uppercase tracking-wider hover:bg-amber-500 hover:text-slate-900 transition-colors rounded-sm">
+          <a
+            href="#contact"
+            className="inline-block bg-slate-900 text-white px-8 py-3 font-bold text-sm uppercase tracking-wider hover:bg-amber-500 hover:text-slate-900 transition-colors rounded-sm"
+          >
             Contact Compliance Team
           </a>
         </div>

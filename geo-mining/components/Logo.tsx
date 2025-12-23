@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 /**
@@ -7,19 +6,23 @@ import React from 'react';
  */
 export const Logo: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <div className={`${className} relative flex items-center justify-center overflow-hidden rounded-full bg-white ring-2 ring-slate-100 shadow-inner`}>
-      <img 
+    <div
+      className={`${className} relative flex items-center justify-center overflow-hidden rounded-full bg-white ring-2 ring-slate-100 shadow-inner`}
+    >
+      <img
         // Use a relative path to the file in your project folder
-        src="./logo.png"
+        src="./logo.jpg"
         alt="GEO Mining & Environmental Consultancy"
         className="w-full h-full object-contain p-0.5"
         onError={(e) => {
           const target = e.target as HTMLImageElement;
           // Fallback to a remote URL if local logo.png is not found
-          target.src = 'https://raw.githubusercontent.com/stackblitz/stackblitz-images/main/geomining-logo.png';
+          target.src =
+            'https://raw.githubusercontent.com/stackblitz/stackblitz-images/main/geomining-logo.png';
           target.onerror = () => {
-             // Ultimate fallback using initials
-             target.src = 'https://api.dicebear.com/7.x/initials/svg?seed=GM&backgroundColor=2d5a27&fontColor=ffffff&fontSize=45';
+            // Ultimate fallback using initials
+            target.src =
+              'https://api.dicebear.com/7.x/initials/svg?seed=GM&backgroundColor=2d5a27&fontColor=ffffff&fontSize=45';
           };
         }}
       />

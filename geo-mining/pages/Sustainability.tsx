@@ -1,6 +1,14 @@
 import React, { useEffect } from 'react';
 import PageHeader from '../components/PageHeader';
-import { Leaf, Users, HardHat, Scroll, UserCheck, Recycle, ShieldCheck } from 'lucide-react';
+import {
+  Leaf,
+  Users,
+  HardHat,
+  Scroll,
+  UserCheck,
+  Recycle,
+  ShieldCheck,
+} from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 
 const Sustainability: React.FC = () => {
@@ -17,47 +25,47 @@ const Sustainability: React.FC = () => {
 
   const pillars = [
     {
-      id: "environment",
+      id: 'environment',
       icon: Leaf,
-      label: "Environmental Protection",
-      meaning: "EPA compliance, biodiversity, land restoration"
+      label: 'Environmental Protection',
+      meaning: 'EPA compliance, biodiversity, land restoration',
     },
     {
-      id: "community",
+      id: 'community',
       icon: Users,
-      label: "Community Development",
-      meaning: "CDA, local benefits, stakeholder engagement"
+      label: 'Community Development',
+      meaning: 'CDA, local benefits, stakeholder engagement',
     },
     {
-      id: "safety",
+      id: 'safety',
       icon: HardHat,
-      label: "Occupational Safety",
-      meaning: "Worker safety & training"
+      label: 'Occupational Safety',
+      meaning: 'Worker safety & training',
     },
     {
-      id: "compliance",
+      id: 'compliance',
       icon: Scroll,
-      label: "Regulatory Compliance",
-      meaning: "Mining law, EPA permits"
+      label: 'Regulatory Compliance',
+      meaning: 'Mining law, EPA permits',
     },
     {
-      id: "employment",
+      id: 'employment',
       icon: UserCheck,
-      label: "Local Employment",
-      meaning: "Liberian workforce & capacity building"
+      label: 'Local Employment',
+      meaning: 'Liberian workforce & capacity building',
     },
     {
-      id: "rehabilitation",
+      id: 'rehabilitation',
       icon: Recycle,
-      label: "Rehabilitation & Closure",
-      meaning: "Post-mining land use"
-    }
+      label: 'Rehabilitation & Closure',
+      meaning: 'Post-mining land use',
+    },
   ];
 
   return (
     <div>
-       <PageHeader 
-        title="Sustainability & Community" 
+      <PageHeader
+        title="Sustainability & Community"
         category="Our Commitment"
         subtitle="Sustainability is embedded across all Group activities and decision-making processes."
         image="https://picsum.photos/1920/801?grayscale"
@@ -65,24 +73,34 @@ const Sustainability: React.FC = () => {
 
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 md:px-8 mb-16 text-center">
-          <h2 className="text-3xl font-light text-slate-900 mb-6">Sustainability Framework</h2>
+          <h2 className="text-3xl font-light text-slate-900 mb-6">
+            Sustainability Framework
+          </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            Geo Mining & Environmental Consultancy is committed to sustainable mining practices that protect the environment, support host communities, and create long-term value.
+            Geo Mining & Environmental Consultancy is committed to sustainable
+            mining practices that protect the environment, support host
+            communities, and create long-term value.
           </p>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pillars.map((pillar) => (
-            <div 
-              key={pillar.id} 
-              id={pillar.id} 
+            <div
+              key={pillar.id}
+              id={pillar.id}
               className="p-8 border border-slate-200 rounded-sm hover:border-amber-500 transition-colors group scroll-mt-24 bg-slate-50"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:shadow-md transition-all border border-slate-100">
-                  <pillar.icon className="text-slate-700 group-hover:text-amber-600 transition-colors" size={32} strokeWidth={1.5} />
+                  <pillar.icon
+                    className="text-slate-700 group-hover:text-amber-600 transition-colors"
+                    size={32}
+                    strokeWidth={1.5}
+                  />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{pillar.label}</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  {pillar.label}
+                </h3>
                 <p className="text-slate-600 leading-relaxed text-sm">
                   {pillar.meaning}
                 </p>
@@ -94,11 +112,16 @@ const Sustainability: React.FC = () => {
         {/* Future Commitment */}
         <div className="max-w-4xl mx-auto px-4 md:px-8 mt-20 text-center">
           <div className="bg-slate-50 p-10 rounded-sm border-t-4 border-slate-900">
-             <ShieldCheck className="mx-auto text-slate-900 mb-4" size={40} />
-             <h3 className="text-2xl font-bold text-slate-900 mb-4">Our Commitment to the Future</h3>
-             <p className="text-slate-600 leading-relaxed">
-               Through responsible operations and continuous improvement, Geo Mining & Environmental Consultancy aims to contribute positively to Liberia’s natural resource sector and support sustainable development across West Africa.
-             </p>
+            <ShieldCheck className="mx-auto text-slate-900 mb-4" size={40} />
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">
+              Our Commitment to the Future
+            </h3>
+            <p className="text-slate-600 leading-relaxed">
+              Through responsible operations and continuous improvement, Geo
+              Mining & Environmental Consultancy aims to contribute positively
+              to Liberia’s natural resource sector and support sustainable
+              development across West Africa.
+            </p>
           </div>
         </div>
       </section>

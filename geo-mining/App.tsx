@@ -1,5 +1,10 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, ScrollRestoration } from 'react-router-dom';
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  ScrollRestoration,
+} from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -11,18 +16,18 @@ import Gallery from './pages/Gallery';
 
 const ScrollToTop = () => {
   const { pathname } = window.location;
-  
+
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
   return null;
-}
+};
 
 const App: React.FC = () => {
   return (
     <Router>
-       <ScrollToTop />
+      <ScrollToTop />
       <div className="min-h-screen bg-white flex flex-col font-sans text-slate-900">
         <Header />
         <main className="flex-grow">

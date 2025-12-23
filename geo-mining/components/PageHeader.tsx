@@ -7,18 +7,23 @@ interface PageHeaderProps {
   image?: string;
 }
 
-const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle, category, image }) => {
+const PageHeader: React.FC<PageHeaderProps> = ({
+  title,
+  subtitle,
+  category,
+  image,
+}) => {
   return (
     <div className="relative w-full h-[400px] bg-slate-900 overflow-hidden">
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ 
+        style={{
           backgroundImage: `url("${image || 'https://picsum.photos/1920/600?grayscale&blur=2'}")`,
-          opacity: 0.5 
-        }} 
+          opacity: 0.5,
+        }}
       />
-      
+
       {/* Dark Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-transparent" />
 
