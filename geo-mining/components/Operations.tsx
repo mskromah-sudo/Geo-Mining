@@ -1,6 +1,8 @@
 import React from 'react';
 import { Briefcase } from 'lucide-react';
 import { Logo } from './Logo';
+import resourceImg from '../images/Resource.jpg';
+import miningImg from '../images/Mining.jpg';
 
 const Operations: React.FC = () => {
   return (
@@ -68,7 +70,7 @@ const Operations: React.FC = () => {
             <div className="relative z-10">
               <div className="h-16 mb-6 flex items-center">
                 <img
-                  src="./Resource.jpg"
+                  src={resourceImg}
                   alt="StoneCrest Resource Limited Logo"
                   className="max-h-full max-w-full object-contain"
                 />
@@ -86,16 +88,15 @@ const Operations: React.FC = () => {
               </p>
               <ul className="space-y-2 text-sm text-black">
                 <li className="flex items-start gap-2">
-                  <span className="text-black mt-1">▪</span> Mineral
-                  exploration & surveys
+                  <span className="text-black mt-1">▪</span> Mineral exploration
+                  & surveys
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-black mt-1">▪</span> Mapping,
-                  sampling & data analysis
+                  <span className="text-black mt-1">▪</span> Mapping, sampling &
+                  data analysis
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-black mt-1">▪</span> Resource
-                  estimation
+                  <span className="text-black mt-1">▪</span> Resource estimation
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-black mt-1">▪</span> Early project
@@ -110,7 +111,7 @@ const Operations: React.FC = () => {
             <div className="relative z-10">
               <div className="h-16 mb-6 flex items-center">
                 <img
-                  src="./Mining.jpg"
+                  src={miningImg}
                   alt="StoneCrest Mining Corporation Logo"
                   className="max-h-full max-w-full object-contain"
                 />

@@ -105,10 +105,16 @@ const Header: React.FC = () => {
             </span>
           </div>
           <div className="hidden md:flex gap-6 text-slate-100">
-            <Link to="/client-portal" className="hover:text-amber-400 transition-colors">
+            <Link
+              to="/client-portal"
+              className="hover:text-amber-400 transition-colors"
+            >
               Client Portal
             </Link>
-            <Link to="/careers" className="hover:text-amber-400 transition-colors">
+            <Link
+              to="/careers"
+              className="hover:text-amber-400 transition-colors"
+            >
               Careers
             </Link>
           </div>
@@ -144,10 +150,11 @@ const Header: React.FC = () => {
                 >
                   <Link
                     to={item.href}
-                    className={`px-4 py-2 font-bold text-[10px] uppercase tracking-wider transition-all flex items-center gap-1.5 h-full ${isActive(item.href)
-                      ? 'text-[#2d5a27] border-b-4 border-[#2d5a27]'
-                      : 'text-slate-600 hover:text-[#2d5a27]'
-                      }`}
+                    className={`px-4 py-2 font-bold text-[10px] uppercase tracking-wider transition-all flex items-center gap-1.5 h-full ${
+                      isActive(item.href)
+                        ? 'text-[#2d5a27] border-b-4 border-[#2d5a27]'
+                        : 'text-slate-600 hover:text-[#2d5a27]'
+                    }`}
                   >
                     {item.name}
                     {item.children && (

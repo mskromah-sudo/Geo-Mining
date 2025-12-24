@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import heroImg from '../images/hero-background.jpg';
 
 const Hero: React.FC = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -10,7 +11,7 @@ const Hero: React.FC = () => {
     >
       {/* Background Image using <img> for better path reliability */}
       <img
-        src="./hero-background.jpg"
+        src={heroImg}
         alt="GEO Mining Operations"
         onLoad={() => setImageLoaded(true)}
         className={`absolute inset-0 w-full h-full object-cover object-right md:object-center transition-all duration-1000 ${

@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImg from '../images/logo.jpg';
 
 /**
  * The Logo component renders the official GEO Mining logo.
@@ -11,7 +12,7 @@ export const Logo: React.FC<{ className?: string }> = ({ className }) => {
     >
       <img
         // Use a relative path to the file in your project folder
-        src="./logo.jpg"
+        src={logoImg}
         alt="GEO Mining & Environmental Consultancy"
         className="w-full h-full object-contain p-0.5"
         onError={(e) => {
