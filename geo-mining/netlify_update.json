@@ -1,0 +1,10 @@
+{
+  "site_id": "162cfda1-7a58-48e1-ac62-498934d67777",
+  "site": {
+    "build_settings": {
+      "base": "geo-mining",
+      "cmd": "npm run build",
+      "dir": "dist"
+    }
+  }
+}
