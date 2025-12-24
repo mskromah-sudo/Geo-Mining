@@ -1,4 +1,6 @@
 [build]
+  # Base directory for monorepo
+  base = "geo-mining"
   # Directory where your build outputs (the dist folder from Vite)
   publish = "dist"
   
