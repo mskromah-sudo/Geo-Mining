@@ -34,7 +34,7 @@ const Operations: React.FC = () => {
                 <Logo className="w-full h-full" />
               </div>
               <h4 className="text-xl font-bold mb-2">
-                Geo Mining & Environmental Consultancy
+                GeoMining & Environmental Consultancy
               </h4>
               <p className="text-amber-500 text-xs font-bold uppercase tracking-wider mb-6">
                 Parent Company

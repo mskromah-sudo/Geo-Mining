@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import PageHeader from '../components/PageHeader';
 import { Layers } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
+import resourceImg from '../images/Resource.jpg';
+import miningImg from '../images/Mining.jpg';
 
 const Subsidiaries: React.FC = () => {
   const { hash } = useLocation();
@@ -30,7 +32,7 @@ const Subsidiaries: React.FC = () => {
             Our Operating Companies
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            Geo Mining & Environmental Consultancy oversees two specialized
+            GeoMining & Environmental Consultancy oversees two specialized
             subsidiaries, each focused on distinct but complementary areas of
             the mining value chain.
           </p>
@@ -47,7 +49,7 @@ const Subsidiaries: React.FC = () => {
                 {/* Logo Area - Replace src with actual file path */}
                 <div className="w-32 h-32 flex-shrink-0 flex items-center justify-center bg-white rounded-lg shadow-sm border border-slate-100 p-2">
                   <img
-                    src="./Resource.jpg"
+                    src={resourceImg}
                     alt="StoneCrest Resource Limited Logo"
                     className="max-w-full max-h-full object-contain"
                   />
@@ -111,7 +113,7 @@ const Subsidiaries: React.FC = () => {
                 {/* Logo Area - Replace src with actual file path */}
                 <div className="w-48 h-32 flex-shrink-0 flex items-center justify-center bg-white rounded-lg shadow-sm border border-slate-100 p-2">
                   <img
-                    src="./Mining.jpg"
+                    src={resourceImg}
                     alt="StoneCrest Mining Corporation Logo"
                     className="max-w-full max-h-full object-contain"
                   />
