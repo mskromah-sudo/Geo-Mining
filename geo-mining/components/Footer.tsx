@@ -239,11 +239,10 @@ const Footer: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full py-2.5 px-4 rounded-md text-[10px] font-bold uppercase tracking-widest transition-all ${
-                    submitted
-                      ? 'bg-green-600 text-white'
-                      : 'bg-amber-500 text-slate-900 hover:bg-white'
-                  } disabled:opacity-50`}
+                  className={`w-full py-2.5 px-4 rounded-md text-[10px] font-bold uppercase tracking-widest transition-all ${submitted
+                    ? 'bg-green-600 text-white'
+                    : 'bg-amber-500 text-slate-900 hover:bg-white'
+                    } disabled:opacity-50`}
                 >
                   {isSubmitting
                     ? 'Sending...'
@@ -262,12 +261,12 @@ const Footer: React.FC = () => {
             Consultancy. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link to="/terms-of-service" className="hover:text-white transition-colors">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

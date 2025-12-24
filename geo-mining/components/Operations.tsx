@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Briefcase } from 'lucide-react';
 import { Logo } from './Logo';
 import resourceImg from '../images/Resource.jpg';
@@ -66,86 +67,97 @@ const Operations: React.FC = () => {
           </div>
 
           {/* Subsidiary 1: StoneCrest Resource Limited */}
-          <div className="bg-[#f6bc15] border border-slate-200 p-8 rounded-sm relative overflow-hidden group hover:border-amber-500 transition-colors">
-            <div className="relative z-10">
-              <div className="h-16 mb-6 flex items-center">
-                <img
-                  src={resourceImg}
-                  alt="StoneCrest Resource Limited Logo"
-                  className="max-h-full max-w-full object-contain"
-                />
+          <Link
+            to="/subsidiaries/stonecrest-resource"
+            className="block h-full"
+          >
+            <div className="h-full bg-[#f6bc15] border border-slate-200 p-8 rounded-sm relative overflow-hidden group hover:border-amber-500 transition-colors cursor-pointer">
+              <div className="relative z-10">
+                <div className="h-16 mb-6 flex items-center">
+                  <img
+                    src={resourceImg}
+                    alt="StoneCrest Resource Limited Logo"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <h4 className="text-xl font-bold text-slate-900 mb-2">
+                  StoneCrest Resource Limited
+                </h4>
+                <p className="text-white text-xs font-bold uppercase tracking-wider mb-6">
+                  Exploration & Resource Development
+                </p>
+                <p className="text-black text-sm mb-6 leading-relaxed">
+                  Focuses on identifying, evaluating, and advancing mineral
+                  resources through early-stage development and geological
+                  surveys.
+                </p>
+                <ul className="space-y-2 text-sm text-black">
+                  <li className="flex items-start gap-2">
+                    <span className="text-black mt-1">▪</span> Mineral
+                    exploration & surveys
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-black mt-1">▪</span> Mapping, sampling
+                    & data analysis
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-black mt-1">▪</span> Resource
+                    estimation
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-black mt-1">▪</span> Early project
+                    development
+                  </li>
+                </ul>
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-2">
-                StoneCrest Resource Limited
-              </h4>
-              <p className="text-white text-xs font-bold uppercase tracking-wider mb-6">
-                Exploration & Resource Development
-              </p>
-              <p className="text-black text-sm mb-6 leading-relaxed">
-                Focuses on identifying, evaluating, and advancing mineral
-                resources through early-stage development and geological
-                surveys.
-              </p>
-              <ul className="space-y-2 text-sm text-black">
-                <li className="flex items-start gap-2">
-                  <span className="text-black mt-1">▪</span> Mineral exploration
-                  & surveys
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-black mt-1">▪</span> Mapping, sampling &
-                  data analysis
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-black mt-1">▪</span> Resource estimation
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-black mt-1">▪</span> Early project
-                  development
-                </li>
-              </ul>
             </div>
-          </div>
+          </Link>
 
           {/* Subsidiary 2: StoneCrest Mining Corporation */}
-          <div className="bg-slate-50 border border-slate-200 p-8 rounded-sm relative overflow-hidden group hover:border-amber-500 transition-colors">
-            <div className="relative z-10">
-              <div className="h-16 mb-6 flex items-center">
-                <img
-                  src={miningImg}
-                  alt="StoneCrest Mining Corporation Logo"
-                  className="max-h-full max-w-full object-contain"
-                />
+          <Link
+            to="/subsidiaries/stonecrest-mining"
+            className="block h-full"
+          >
+            <div className="h-full bg-slate-50 border border-slate-200 p-8 rounded-sm relative overflow-hidden group hover:border-amber-500 transition-colors cursor-pointer">
+              <div className="relative z-10">
+                <div className="h-16 mb-6 flex items-center">
+                  <img
+                    src={miningImg}
+                    alt="StoneCrest Mining Corporation Logo"
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <h4 className="text-xl font-bold text-slate-900 mb-2">
+                  StoneCrest Mining Corporation
+                </h4>
+                <p className="text-amber-600 text-xs font-bold uppercase tracking-wider mb-6">
+                  Mining Operations & Production
+                </p>
+                <p className="text-slate-600 text-sm mb-6 leading-relaxed">
+                  Responsible for mine development and production, translating
+                  exploration success into operational projects safely and
+                  responsibly.
+                </p>
+                <ul className="space-y-2 text-sm text-slate-600">
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 mt-1">▪</span> Mine
+                    development & planning
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 mt-1">▪</span> Mining &
+                    processing operations
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 mt-1">▪</span> HSE management
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-amber-500 mt-1">▪</span> Site
+                    rehabilitation & closure
+                  </li>
+                </ul>
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-2">
-                StoneCrest Mining Corporation
-              </h4>
-              <p className="text-amber-600 text-xs font-bold uppercase tracking-wider mb-6">
-                Mining Operations & Production
-              </p>
-              <p className="text-slate-600 text-sm mb-6 leading-relaxed">
-                Responsible for mine development and production, translating
-                exploration success into operational projects safely and
-                responsibly.
-              </p>
-              <ul className="space-y-2 text-sm text-slate-600">
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-500 mt-1">▪</span> Mine
-                  development & planning
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-500 mt-1">▪</span> Mining &
-                  processing operations
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-500 mt-1">▪</span> HSE management
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-500 mt-1">▪</span> Site
-                  rehabilitation & closure
-                </li>
-              </ul>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

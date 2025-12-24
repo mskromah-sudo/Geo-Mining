@@ -98,6 +98,14 @@ const Subsidiaries: React.FC = () => {
                 the environmental, governance, and sustainability frameworks
                 established by the parent company.
               </p>
+              <div className="mt-8">
+                <a
+                  href="/subsidiaries/stonecrest-resource"
+                  className="inline-block px-6 py-3 bg-amber-500 text-slate-900 font-bold rounded-sm hover:bg-amber-600 transition-colors"
+                >
+                  Learn More
+                </a>
+              </div>
             </div>
           </div>
 
@@ -165,6 +173,14 @@ const Subsidiaries: React.FC = () => {
                 compliance with Liberian mining laws, community agreements, and
                 ESG standards.
               </p>
+              <div className="mt-8">
+                <a
+                  href="/subsidiaries/stonecrest-mining"
+                  className="inline-block px-6 py-3 bg-slate-900 text-white font-bold rounded-sm hover:bg-slate-800 transition-colors"
+                >
+                  Learn More
+                </a>
+              </div>
             </div>
           </div>
         </div>

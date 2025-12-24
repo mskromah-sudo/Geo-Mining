@@ -14,11 +14,10 @@ const Hero: React.FC = () => {
         src={heroImg}
         alt="GEO Mining Operations"
         onLoad={() => setImageLoaded(true)}
-        className={`absolute inset-0 w-full h-full object-cover object-right md:object-center transition-all duration-1000 ${
-          imageLoaded
-            ? 'opacity-80 scale-100 blur-0'
-            : 'opacity-0 scale-110 blur-xl'
-        }`}
+        className={`absolute inset-0 w-full h-full object-cover object-right md:object-center transition-all duration-1000 ${imageLoaded
+          ? 'opacity-80 scale-100 blur-0'
+          : 'opacity-0 scale-110 blur-xl'
+          }`}
       />
 
       {/* Fallback pattern if image fails */}
@@ -50,7 +49,7 @@ const Hero: React.FC = () => {
 
           <div className="max-w-xl border-l-4 border-amber-500 pl-8 py-3 bg-black/20 backdrop-blur-sm">
             <p className="text-lg md:text-xl text-slate-100 font-medium leading-relaxed">
-              Geo Mining & Environmental Consultancy is a Liberian-based group
+              GeoMining & Environmental Consultancy is a Liberian-based group
               committed to the responsible development of mineral resources
               across West Africa.
             </p>
