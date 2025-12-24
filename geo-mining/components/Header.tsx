@@ -105,12 +105,12 @@ const Header: React.FC = () => {
             </span>
           </div>
           <div className="hidden md:flex gap-6 text-slate-100">
-            <a href="#" className="hover:text-amber-400 transition-colors">
+            <Link to="/client-portal" className="hover:text-amber-400 transition-colors">
               Client Portal
-            </a>
-            <a href="#" className="hover:text-amber-400 transition-colors">
+            </Link>
+            <Link to="/careers" className="hover:text-amber-400 transition-colors">
               Careers
-            </a>
+            </Link>
           </div>
         </div>
       </div>

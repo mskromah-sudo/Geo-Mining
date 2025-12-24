@@ -13,6 +13,8 @@ import Sustainability from './pages/Sustainability';
 import Governance from './pages/Governance';
 import Projects from './pages/Projects';
 import Gallery from './pages/Gallery';
+import ClientPortal from './pages/ClientPortal';
+import Careers from './pages/Careers';
 
 const ScrollToTop = () => {
   const { pathname } = window.location;
@@ -39,6 +41,8 @@ const App: React.FC = () => {
             <Route path="/governance" element={<Governance />} />
             <Route path="/projects-services" element={<Projects />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/client-portal" element={<ClientPortal />} />
+            <Route path="/careers" element={<Careers />} />
           </Routes>
         </main>
         <Footer />
