@@ -1,0 +1,14 @@
+[build]
+  # Point to the subdirectory where the React app lives
+  base = "geo-mining"
+  
+  # Directory to publish (relative to the base)
+  publish = "dist"
+  
+  # Build command to run (inside the base)
+  command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
