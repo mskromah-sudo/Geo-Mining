@@ -80,9 +80,7 @@ const Projects: React.FC = () => {
               Our Expertise
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed">
-              Geo Mining & Environmental Consultancy offers a full suite of
-              services tailored to the West African mining sector. Our
-              integrated approach ensures technical excellence at every stage.
+              We blend deep geoscientific knowledge with robust environmental and engineering principles across the entire project lifecycle.
             </p>
           </div>
 
