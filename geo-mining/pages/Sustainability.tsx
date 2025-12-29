@@ -77,9 +77,7 @@ const Sustainability: React.FC = () => {
             Sustainability Framework
           </h2>
           <p className="text-lg text-slate-600 leading-relaxed">
-            Geo Mining & Environmental Consultancy is committed to sustainable
-            mining practices that protect the environment, support host
-            communities, and create long-term value.
+            We embed circular economy principles, biodiversity protection, and community engagement strategies into core project plans, ensuring sustainability is by design.
           </p>
         </div>
 

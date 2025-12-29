@@ -59,8 +59,8 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              Advancing Responsible Mineral Development in Liberia and West
-              Africa. Guided by Science, Grounded in Sustainability.
+              A specialized consultancy bridging geology, mining, and environmental science.
+              Guided by Science, Grounded in Sustainability.
             </p>
             <div className="flex space-x-4">
               <a

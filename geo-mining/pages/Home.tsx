@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Hero from '../components/Hero';
 import Operations from '../components/Operations';
-import { Globe, Target, Briefcase, CheckCircle2 } from 'lucide-react';
+import { Globe, Target, Briefcase, CheckCircle2, Leaf } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 
 const Home: React.FC = () => {
@@ -28,62 +28,126 @@ const Home: React.FC = () => {
         <h2 className="text-3xl font-light text-slate-900 mb-6">
           About Us
         </h2>
-        <p className="text-lg text-slate-600 leading-relaxed mb-8">
-          Geo-Mining and Environmental Consultancy Inc is a premier, multidisciplinary consultancy providing integrated solutions at the critical intersection of earth resources and environmental stewardship. 
-          We empower the mining, energy, infrastructure, and public sectors to navigate the complex challenges of responsible resource development.
-        </p>
-        <p className="text-slate-600 leading-relaxed">
-          With a strong focus on responsible resource development, Geo Mining &
-          Environmental Consultancy delivers technical excellence while ensuring
-          compliance with national regulations and international best practices.
-        </p>
+        <div className="space-y-6">
+          <p className="text-lg text-slate-600 leading-relaxed">
+            Geo-Mining and Environmental Consultancy Inc is a premier, multidisciplinary consultancy providing integrated solutions at the critical intersection of earth resources and environmental stewardship.
+          </p>
+          <p className="text-lg text-slate-600 leading-relaxed">
+            We empower the mining, energy, infrastructure, and public sectors to navigate the complex challenges of responsible resource development.
+          </p>
+        </div>
       </section>
 
-      {/* Who We Are & What We Do */}
-      <section className="bg-slate-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-16">
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-amber-500 rounded-sm text-slate-900">
-                <Globe size={20} />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900">Who We Are</h3>
-            </div>
-            <p className="text-slate-600 leading-relaxed mb-6">
-              Geo Mining & Environmental Consultancy provides leadership,
-              technical oversight, and environmental governance across the
-              Group. The company plays a central role in guiding mining projects
-              from early-stage assessment through development and production,
-              ensuring that environmental protection, community engagement, and
-              sustainability are embedded in every project.
+      {/* Mission & Motto Section */}
+      <section className="bg-amber-500 py-16">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-slate-900 font-bold uppercase tracking-widest text-sm mb-4">Our Mission</h3>
+            <p className="text-2xl font-light text-slate-900 mb-8 italic">
+              "To deliver technically excellent, socially responsible, and environmentally sound consulting services that de-risk projects, ensure regulatory compliance, and create sustainable value."
+            </p>
+            <div className="h-px w-20 bg-slate-900/20 mx-auto mb-8"></div>
+            <h3 className="text-slate-900 font-bold uppercase tracking-widest text-sm mb-4">Our Motto</h3>
+            <p className="text-3xl font-black text-slate-900 uppercase tracking-tighter">
+              Guided by Science, <span className="text-white">Grounded in Sustainability</span>
             </p>
           </div>
+        </div>
+      </section>
 
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-amber-500 rounded-sm text-slate-900">
-                <Briefcase size={20} />
+      {/* Core Expertise */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-light text-slate-900 mb-4">Our Core Expertise</h2>
+            <p className="text-slate-600">Deep geoscientific knowledge blended with robust environmental and engineering principles.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="bg-slate-50 p-8 rounded-sm border-l-4 border-amber-500">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 bg-slate-900 rounded-sm text-amber-500">
+                  <Globe size={24} />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900">1. Geo-Mining Services</h3>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900">What We Do</h3>
+              <ul className="space-y-3 text-slate-700">
+                {[
+                  'Exploration & Resource Estimation: Geological mapping, geophysical surveys, and modeling.',
+                  'Mine Design & Planning: Feasibility studies, optimization, and geotechnical engineering.',
+                  'Due Diligence & Technical Audits: Independent reviews for investors and lenders.',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle2 className="text-amber-600 shrink-0 mt-1" size={18} />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="space-y-4 text-slate-700">
-              {[
-                'Geological consultancy and feasibility studies',
-                'Environmental and Social Impact Assessments (ESIA)',
-                'Regulatory compliance with the Liberia EPA & Ministry of Mines',
-                'ESG policy development and implementation',
-                'Community engagement and stakeholder management',
-                'Risk management and project oversight',
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2
-                    className="text-amber-600 shrink-0 mt-1"
-                    size={18}
-                  />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+
+            <div className="bg-slate-50 p-8 rounded-sm border-l-4 border-[#2d5a27]">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 bg-slate-900 rounded-sm text-[#2d5a27]">
+                  <Leaf size={24} />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900">2. Environmental & Sustainability</h3>
+              </div>
+              <ul className="space-y-3 text-slate-700">
+                {[
+                  'Environmental & Social Impact Assessment (ESIA)',
+                  'Mine Closure & Rehabilitation Planning',
+                  'Water & Waste Management (TSF design, characterization)',
+                  'Licenses and Permits Application & Management',
+                  'Compliance with local and international frameworks',
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle2 className="text-[#2d5a27] shrink-0 mt-1" size={18} />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Differentiators */}
+      <section className="bg-slate-900 py-20 text-white">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <h2 className="text-3xl font-light mb-12 border-b border-slate-800 pb-6 uppercase tracking-widest text-amber-500">Our Differentiators</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            {[
+              { title: 'Integrated Approach', desc: 'Geologists, engineers, and scientists collaborating from day one.' },
+              { title: 'Risk-Focused', desc: 'Early identification and mitigation of technical and social risks.' },
+              { title: 'Sustainability by Design', desc: 'Embedding circular economy and biodiversity into core plans.' },
+              { title: 'Global Standards', desc: 'International best practices combined with local insight.' },
+              { title: 'Technology-Driven', desc: 'Advanced GIS, 3D modeling, and remote sensing.' },
+            ].map((diff, i) => (
+              <div key={i} className="group">
+                <h4 className="font-bold text-lg mb-3 group-hover:text-amber-500 transition-colors">{diff.title}</h4>
+                <p className="text-slate-400 text-sm leading-relaxed">{diff.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Who We Serve */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
+          <h2 className="text-3xl font-light text-slate-900 mb-12">Who We Serve</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              'Mining & Exploration Companies',
+              'Energy Developers (Oil & Gas, Renewables)',
+              'Engineering & Construction Firms',
+              'Financial Institutions & Legal Firms',
+              'Government Agencies & Development Organizations',
+            ].map((sector, i) => (
+              <span key={i} className="bg-white border border-slate-200 px-6 py-3 rounded-full text-slate-700 font-medium shadow-sm hover:border-amber-500 transition-colors">
+                {sector}
+              </span>
+            ))}
           </div>
         </div>
       </section>
@@ -93,40 +157,23 @@ const Home: React.FC = () => {
         <Operations />
       </div>
 
-      {/* Purpose & Values */}
-      <section
-        id="values"
-        className="py-20 bg-slate-900 text-white scroll-mt-24"
-      >
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="mb-12 max-w-3xl">
-            <h2 className="text-amber-500 font-bold uppercase tracking-widest text-sm mb-3">
-              Core Principles
-            </h2>
-            <h3 className="text-3xl font-light mb-6">Our Purpose & Values</h3>
-            <p className="text-lg text-slate-300 leading-relaxed">
-              To responsibly develop mineral resources in Liberia and West
-              Africa while protecting the environment, empowering communities,
-              and contributing to sustainable economic growth.
-            </p>
+      {/* Our Promise */}
+      <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 md:px-8 text-center">
+          <div className="inline-block p-4 bg-amber-50 text-amber-600 rounded-full mb-6">
+            <Target size={32} />
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {[
-              'Environmental Stewardship',
-              'Integrity & Transparency',
-              'Technical Excellence',
-              'Community Partnership',
-              'Local Empowerment',
-            ].map((val, i) => (
-              <div
-                key={i}
-                className="bg-slate-800 p-6 rounded-sm border-t-4 border-amber-500 hover:bg-slate-700 transition-colors"
-              >
-                <Target className="text-amber-500 mb-4" size={24} />
-                <h4 className="font-bold text-lg">{val}</h4>
-              </div>
-            ))}
+          <h2 className="text-4xl font-black text-slate-900 mb-8 uppercase tracking-tighter">Our Promise</h2>
+          <p className="text-xl text-slate-600 leading-relaxed italic">
+            "At Geo-Mining and Environmental Consultancy Inc we are more than consultants; we are partners in building a future where resource development and environmental integrity go hand in hand. We turn challenges into opportunities for sustainable growth."
+          </p>
+          <div className="mt-12">
+            <a
+              href="#contact"
+              className="inline-block bg-slate-900 text-white px-12 py-5 font-black text-xs uppercase tracking-widest hover:bg-amber-500 hover:text-slate-900 transition-all transform hover:-translate-y-1"
+            >
+              Partner with us
+            </a>
           </div>
         </div>
       </section>

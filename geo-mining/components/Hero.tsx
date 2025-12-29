@@ -48,10 +48,12 @@ const Hero: React.FC = () => {
           </h1>
 
           <div className="max-w-xl border-l-4 border-amber-500 pl-8 py-3 bg-black/20 backdrop-blur-sm">
-            <p className="text-lg md:text-xl text-slate-100 font-medium leading-relaxed">
-              GeoMining & Environmental Consultancy is a Liberian-based group
-              committed to the responsible development of mineral resources
-              across West Africa.
+            <p className="text-lg md:text-xl text-slate-100 font-medium leading-relaxed mb-4">
+              A specialized consultancy bridging geology, mining, and environmental science. 
+              We guide resource and infrastructure projects from discovery through closure.
+            </p>
+            <p className="text-amber-400 font-bold uppercase tracking-widest text-sm">
+              “Guided by Science, Grounded in Sustainability”
             </p>
           </div>
 
