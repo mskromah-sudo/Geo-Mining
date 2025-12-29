@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import PageHeader from '../components/PageHeader';
 import { Layers } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
-import resourceImg from '../images/Resource.jpg';
-import miningImg from '../images/Mining.jpg';
+import stmcLogo from '../images/stmc.jpeg';
+import scrlLogo from '../images/scrl.jpeg';
+
 
 const Subsidiaries: React.FC = () => {
   const { hash } = useLocation();
@@ -49,7 +50,7 @@ const Subsidiaries: React.FC = () => {
                 {/* Logo Area - Replace src with actual file path */}
                 <div className="w-32 h-32 flex-shrink-0 flex items-center justify-center bg-white rounded-lg shadow-sm border border-slate-100 p-2">
                   <img
-                    src={resourceImg}
+                    src={scrlLogo}
                     alt="StoneCrest Resource Limited Logo"
                     className="max-w-full max-h-full object-contain"
                   />
@@ -121,7 +122,7 @@ const Subsidiaries: React.FC = () => {
                 {/* Logo Area - Replace src with actual file path */}
                 <div className="w-48 h-32 flex-shrink-0 flex items-center justify-center bg-white rounded-lg shadow-sm border border-slate-100 p-2">
                   <img
-                    src={resourceImg}
+                    src={stmcLogo}
                     alt="StoneCrest Mining Corporation Logo"
                     className="max-w-full max-h-full object-contain"
                   />
