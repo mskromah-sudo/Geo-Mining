@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import PageHeader from '../components/PageHeader';
 import { Layers } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
-import stmcLogo from '../images/Resource.jpg';
-import scrlLogo from '../images/Mining.jpg';
+import stmcLogo from '../images/Mining.jpg';
+import scrlLogo from '../images/Resource.jpg';
 
 
 const Subsidiaries: React.FC = () => {
