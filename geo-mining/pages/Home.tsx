@@ -26,16 +26,11 @@ const Home: React.FC = () => {
         className="py-20 max-w-4xl mx-auto px-4 md:px-8 text-center scroll-mt-24"
       >
         <h2 className="text-3xl font-light text-slate-900 mb-6">
-          About The Group
+          About Us
         </h2>
         <p className="text-lg text-slate-600 leading-relaxed mb-8">
-          Geo Mining & Environmental Consultancy is a Liberian-based mining and
-          environmental services group providing integrated geological,
-          environmental, and strategic support to mining projects across Liberia
-          and the wider West African region. Headquartered in Liberia, the
-          company serves as the parent and holding entity overseeing the Group’s
-          subsidiaries and setting governance, environmental, and operational
-          standards.
+          Geo-Mining and Environmental Consultancy Inc is a premier, multidisciplinary consultancy providing integrated solutions at the critical intersection of earth resources and environmental stewardship. 
+          We empower the mining, energy, infrastructure, and public sectors to navigate the complex challenges of responsible resource development.
         </p>
         <p className="text-slate-600 leading-relaxed">
           With a strong focus on responsible resource development, Geo Mining &
