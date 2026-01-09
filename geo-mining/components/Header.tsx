@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Menu, X, MapPin, ChevronDown, ChevronRight } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { Logo } from './Logo';
+import { Menu, X, MapPin, ChevronDown, ChevronRight } from 'lucide-react';
+import Logo from './Logo';
+import { useDesign } from '../contexts/DesignContext';
 
 interface NavItem {
   name: string;
@@ -74,6 +75,10 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const location = useLocation();
+  const { settings } = useDesign();
+
+  const logoUrl = settings['logo_url'];
+  const siteTitle = settings['site_title'] || 'Geo-Mining';
 
   const isActive = (path: string) => {
     if (path === '/' && location.pathname === '/') return true;
@@ -126,20 +131,22 @@ const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="flex justify-between items-center h-24 md:h-32">
             {/* Logo Section */}
-            <Link
-              to="/"
-              className="flex-shrink-0 flex items-center gap-4 group"
-            >
-              <Logo className="w-16 h-16 md:w-24 md:h-24 shadow-xl transition-transform duration-500 group-hover:scale-105" />
-              <div className="flex flex-col">
-                <span className="text-[#2d5a27] font-black text-xl md:text-2xl leading-none tracking-tight">
-                  GeoMining
+            {/* Logo */}
+            <div className="flex-shrink-0 flex items-center">
+              <Link to="/" className="flex items-center space-x-2">
+                {logoUrl ? (
+                  <img src={logoUrl} alt={siteTitle} className="h-10 w-auto" />
+                ) : (
+                  <Logo className="h-10 w-auto text-blue-600" />
+                )}
+                <span className="hidden md:block font-bold text-xl tracking-tight text-slate-900">
+                  {siteTitle}
                 </span>
-                <span className="text-slate-500 text-[8px] md:text-[9px] uppercase font-bold tracking-[0.2em] mt-2 max-w-[180px]">
-                  AND ENVIRONMENTAL CONSULTANCY
+                <span className="md:hidden font-bold text-xl tracking-tight text-slate-900">
+                  GMEC
                 </span>
-              </div>
-            </Link>
+              </Link>
+            </div>
 
             {/* Desktop Menu */}
             <nav className="hidden xl:flex space-x-1 h-full items-center">
@@ -150,11 +157,10 @@ const Header: React.FC = () => {
                 >
                   <Link
                     to={item.href}
-                    className={`px-4 py-2 font-bold text-[10px] uppercase tracking-wider transition-all flex items-center gap-1.5 h-full ${
-                      isActive(item.href)
-                        ? 'text-[#2d5a27] border-b-4 border-[#2d5a27]'
-                        : 'text-slate-600 hover:text-[#2d5a27]'
-                    }`}
+                    className={`px-4 py-2 font-bold text-[10px] uppercase tracking-wider transition-all flex items-center gap-1.5 h-full ${isActive(item.href)
+                      ? 'text-[#2d5a27] border-b-4 border-[#2d5a27]'
+                      : 'text-slate-600 hover:text-[#2d5a27]'
+                      }`}
                   >
                     {item.name}
                     {item.children && (

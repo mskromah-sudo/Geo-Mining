@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Send,
-} from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ChevronRight, ArrowRight, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
+import { useDesign } from '../contexts/DesignContext';
 
 const Footer: React.FC = () => {
+  const { settings } = useDesign();
+
+  const socialLinks = {
+    facebook: settings['facebook_url'] || '#',
+    twitter: settings['twitter_url'] || '#',
+    linkedin: settings['linkedin_url'] || '#',
+    instagram: settings['instagram_url'] || '#',
+  };
+
+  const siteTitle = settings['site_title'] || 'Geo-Mining & Environmental Consultancy';
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -63,23 +67,17 @@ const Footer: React.FC = () => {
               Guided by Science, Grounded in Sustainability.
             </p>
             <div className="flex space-x-4">
-              <a
-                href="#"
-                className="w-10 h-10 bg-slate-800 flex items-center justify-center rounded-full hover:bg-[#2d5a27] transition-all"
-              >
-                <Linkedin size={18} />
+              <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2.5 rounded-full hover:bg-[#2d5a27] text-slate-400 hover:text-white transition-all transform hover:-translate-y-1">
+                <Facebook size={18} />
               </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-slate-800 flex items-center justify-center rounded-full hover:bg-[#2d5a27] transition-all"
-              >
+              <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2.5 rounded-full hover:bg-[#2d5a27] text-slate-400 hover:text-white transition-all transform hover:-translate-y-1">
                 <Twitter size={18} />
               </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-slate-800 flex items-center justify-center rounded-full hover:bg-[#2d5a27] transition-all"
-              >
-                <Facebook size={18} />
+              <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2.5 rounded-full hover:bg-[#2d5a27] text-slate-400 hover:text-white transition-all transform hover:-translate-y-1">
+                <Linkedin size={18} />
+              </a>
+              <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-2.5 rounded-full hover:bg-[#2d5a27] text-slate-400 hover:text-white transition-all transform hover:-translate-y-1">
+                <Instagram size={18} />
               </a>
             </div>
           </div>

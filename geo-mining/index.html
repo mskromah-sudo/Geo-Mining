@@ -4,12 +4,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GeoMining and Environmental Consultancy</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
+  <title>Geo-Mining</title>
+  <style id="dynamic-theme">
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #7c3aed;
+      --accent-color: #059669;
+      --font-family: 'Inter', sans-serif;
+      --heading-font: 'Inter', sans-serif;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-family);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--heading-font);
     }
   </style>
   <script type="importmap">
